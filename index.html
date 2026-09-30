@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kevin Marcellino Wijaya | Designer, Motion Grapher & Business Strategist</title>
+<meta name="description" content="Portfolio of Kevin Marcellino Wijaya: 2.5D motion graphics, 3D asset design, workflow automation and business strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141112;
+  --surface:#1d1819;
+  --surface-2:#261f21;
+  --line:#3a3033;
+  --text:#f1ebe8;
+  --muted:#b0a4a1;
+  --accent:#9b1c31;
+  --accent-hi:#d04560;
+  --radius:10px;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:1.05rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent-hi);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
+
+/* Nav */
+header.nav{position:sticky;top:0;z-index:10;background:rgba(20,17,18,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}
+.logo{font-family:var(--display);font-weight:800;text-decoration:none;font-size:1.15rem}
+.logo span{color:var(--accent-hi)}
+.nav ul{display:flex;gap:.25rem;list-style:none;flex-wrap:wrap}
+.nav ul a{display:block;padding:.4rem .8rem;border-radius:6px;text-decoration:none;color:var(--muted);font-size:.95rem;font-weight:500;transition:background .25s,color .25s}
+.nav ul a:hover{background:var(--surface-2);color:var(--text)}
+
+/* Hero */
+.hero{padding:clamp(3.5rem,9vw,7rem) 0 clamp(3rem,7vw,5rem)}
+.hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:end}
+.hero h1{font-size:clamp(3rem,9vw,6.6rem);font-weight:800}
+.hero h1 .mw{display:inline-block;margin-top:.15em;padding:.02em .22em .08em;background:var(--accent);border-radius:8px;font-size:.55em;letter-spacing:0}
+.tagline{margin-top:1.6rem;font-family:var(--display);font-size:clamp(1.25rem,2.6vw,1.75rem);font-weight:500;color:var(--accent-hi)}
+.hero-side{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);padding:1.5rem}
+.hero-side p{color:var(--muted)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}
+.btn{display:inline-block;padding:.8rem 1.35rem;border-radius:8px;border:2px solid var(--accent);background:var(--accent);color:#fff;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .25s ease,background .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);background:#b0233a;border-color:#b0233a;box-shadow:0 8px 0 -2px rgba(155,28,49,.35)}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--accent-hi);background:var(--surface-2);box-shadow:none}
+
+/* Sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:2rem}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:700}
+.about-text p{max-width:62ch;font-size:1.15rem}
+.about-text p+p{margin-top:1rem;color:var(--muted)}
+
+/* Skills */
+.skill-grid{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.skill-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;transition:border-color .3s,transform .3s}
+.skill-box:hover{border-color:var(--accent-hi);transform:translateY(-4px)}
+.skill-box h3{font-size:1.35rem;margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none}
+.tags li{padding:.4rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--surface-2);font-size:.92rem;font-weight:500;cursor:default;transition:background .25s,border-color .25s,transform .25s,color .25s}
+.tags li:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+
+/* Projects */
+.project-grid{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.card{display:flex;flex-direction:column;gap:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.75rem;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s,background .35s}
+.card:hover{transform:translateY(-8px);border-color:var(--accent-hi);background:var(--surface-2);box-shadow:8px 8px 0 var(--accent)}
+.card .kind{align-self:flex-start;padding:.2rem .65rem;border-radius:5px;background:var(--accent);color:#fff;font-size:.85rem;font-weight:600}
+.card h3{font-size:1.6rem;font-weight:700}
+.card .role{color:var(--accent-hi);font-weight:600}
+.card p:last-child{color:var(--muted)}
+.card .chips{margin-top:auto;padding-top:.5rem}
+
+/* Contact */
+.contact{background:var(--surface)}
+.contact-box{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.contact h2{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800}
+.contact p{color:var(--muted);max-width:52ch;margin-top:1rem}
+.contact .btn-row{margin-top:0;flex-direction:column;align-items:stretch}
+.contact .btn{text-align:center}
+footer{padding:1.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero-grid,.sec-head,.contact-box{grid-template-columns:1fr}
+  .skill-grid,.project-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav ul{display:none}
+  .skill-grid,.project-grid{grid-template-columns:1fr}
+  .btn-row .btn{flex:1 1 100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Kevin<span>.</span>MW</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Kevin Marcellino Wijaya <span class="mw">Kevin M.W.</span></h1>
+        <p class="tagline">Designer, Motion Grapher &amp; Business Strategist.</p>
+      </div>
+      <div class="hero-side">
+        <p>Blending visual skills such as 2.5D motion graphics and 3D asset design with digital transformation strategy and business workflow automation.</p>
+        <div class="btn-row">
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap sec-head">
+      <h2>About me</h2>
+      <div class="about-text">
+        <p>I am a student at BINUS University focusing on business management, supply chain, and operational strategy, with a working knowledge of Lean Six Sigma.</p>
+        <p>Alongside my studies, I design and animate: I use motion graphics and 3D assets to make business ideas easier to see, and I use automation to make business operations easier to run.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills</h2></div>
+      <div class="skill-grid">
+        <div class="skill-box">
+          <h3>Design &amp; Visuals</h3>
+          <ul class="tags">
+            <li>Adobe After Effects</li>
+            <li>Adobe Illustrator</li>
+            <li>Blender</li>
+            <li>2.5D Motion Graphics</li>
+            <li>Vector Illustration</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Tech &amp; Automation</h3>
+          <ul class="tags">
+            <li>n8n</li>
+            <li>AppSheet</li>
+            <li>Google Sheets API</li>
+            <li>Telegram Bot Integration</li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Business &amp; Strategy</h3>
+          <ul class="tags">
+            <li>Lean Six Sigma</li>
+            <li>Supply Chain Management</li>
+            <li>Retail Digital Transformation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2>Projects</h2></div>
+      <div class="project-grid">
+        <article class="card">
+          <span class="kind">Startup</span>
+          <h3>DryOn Venture</h3>
+          <p class="role">Co-founder &amp; Designer</p>
+          <p>Developed the complete visual branding, vector logo, 2.5D video transitions, and pitch deck for a laundry platform.</p>
+          <ul class="tags chips"><li>Branding</li><li>2.5D Motion</li><li>Pitch Deck</li></ul>
+        </article>
+        <article class="card">
+          <span class="kind">Automation</span>
+          <h3>Automated Inventory Management</h3>
+          <p class="role">Workflow Developer</p>
+          <p>Built an automatic restock notification system for a retail tire shop using n8n and AppSheet, connected directly to Telegram.</p>
+          <ul class="tags chips"><li>n8n</li><li>AppSheet</li><li>Telegram</li></ul>
+        </article>
+        <article class="card">
+          <span class="kind">Research</span>
+          <h3>Enterprise Strategy Research</h3>
+          <p class="role">Business Researcher</p>
+          <p>Analyzed retail omnichannel infrastructure and predictive Industry 4.0 models, with case studies of companies such as General Electric and Lenovo.</p>
+          <ul class="tags chips"><li>Omnichannel</li><li>Industry 4.0</li><li>Case Study</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-box">
+      <div>
+        <h2>Let's work together.</h2>
+        <p>Have a brand to animate, a workflow to automate, or a strategy to research? Send me a message and I will reply as soon as I can.</p>
+      </div>
+      <div class="btn-row">
+        <!-- Replace with your real email and LinkedIn URL -->
+        <a class="btn" href="mailto:your.email@example.com?subject=Hello%20Kevin">Send me an email</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Kevin Marcellino Wijaya</span>
+    <span>Designer, Motion Grapher &amp; Business Strategist</span>
+  </div>
+</footer>
+
+</body>
+</html>
